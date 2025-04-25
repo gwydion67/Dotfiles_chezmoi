@@ -1,0 +1,62 @@
+window:
+  padding:
+    x: 10
+    y: 10
+  class:
+    instance: Alacritty
+    general: Alacritty
+  opacity: 0.4
+  decorations: full
+  decorations_theme_variant: Dark
+
+scrolling:
+  history: 10000
+
+font:
+  size: 7
+  normal:
+    style: bold
+draw_bold_text_with_bright_colors: true
+
+window.dynamic_title: true
+
+import:
+  - ~/.config/alacritty/breeze.yaml
+
+selection:
+  save_to_clipboard: true
+
+key_bindings:
+  - {
+      key: Return,
+      mods: Super|Shift,
+      action: SpawnNewInstance
+    }
+theme: Atelierheath.dark
+colors:
+  name: Atelierheath (dark)
+  author: Chris Kempson
+  primary:
+    background: "#1b181b"
+    foreground: "#ab9bab"
+  cursor:
+    text: "#1b181b"
+    cursor: "#ab9bab"
+  normal:
+    black: "#1b181b"
+    red: "#ca402b"
+    green: "#379a37"
+    yellow: "#bb8a35"
+    blue: "#516aec"
+    magenta: "#7b59c0"
+    cyan: "#159393"
+    white: "#ab9bab"
+  bright:
+    black: "#776977"
+    red: "#ca402b"
+    green: "#379a37"
+    yellow: "#bb8a35"
+    blue: "#516aec"
+    magenta: "#7b59c0"
+    cyan: "#159393"
+    white: "#f7f3f7"

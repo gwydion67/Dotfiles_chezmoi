@@ -1,0 +1,40 @@
+import = ["/home/Abhishek/.config/alacritty/dracula.toml"]
+[colors]
+draw_bold_text_with_bright_colors = true
+
+[font]
+size = 7
+
+[font.normal]
+style = "bold"
+
+
+[scrolling]
+history = 10000
+
+[selection]
+save_to_clipboard = true
+
+[window]
+decorations_theme_variant = "Dark"
+opacity = 0.4
+blur = true
+
+
+[cursor]
+vi_mode_style = "Block"
+
+[window.class]
+general = "Alacritty"
+instance = "Alacritty"
+
+[window.padding]
+x = 4
+y = 2
+
+[keyboard]
+bindings = [
+{ key = "]" , mods = "Control", action = "ToggleViMode" },
+{action = "SpawnNewInstance",key = "Return" ,mods = "Super" },
+{action = "ToggleViMode", mode="Vi", key="i"}
+]
