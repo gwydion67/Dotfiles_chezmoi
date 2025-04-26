@@ -25,7 +25,7 @@ keymap("n", "ss", ":w<CR>", opts)
 
 keymap("n", "<Esc>", "<Esc><cmd>NoiceDismiss<CR>", { desc = "Dismiss Noice Message" })
 -- toggle comment
-keymap("n", "<Leader>/", "<cmd>normal gcc<cr>", { desc = "Toggle Comment" })
+keymap({ "n", "v" }, "<Leader>/", "<cmd>normal gcc<cr>", { desc = "Toggle Comment" })
 -- close all
 keymap("n", "<C-x>", entity_close, opts)
 -- formatting
@@ -38,7 +38,7 @@ keymap("n", "<leader>tt", "<cmd>ToggleTerm direction=float<cr>", { desc = "Open 
 
 -- Setup WhichKey for LSP diagnostics
 wk.add({
-  { "<leader>l", group = "LSP Actions",icon= "" },
+  { "<leader>l", group = "LSP Actions", icon = "" },
   {
     "<leader>lj",
     function()
