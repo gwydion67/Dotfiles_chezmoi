@@ -18,8 +18,6 @@ vim.keymap.del("n", "<leader>l")
 -- normal mode
 keymap("i", "kj", "<Esc>", opts)
 keymap("i", "jk", "<Esc>", opts)
-keymap("i", "kk", "<Esc>", opts)
-keymap("i", "jj", "<Esc>", opts)
 -- save
 keymap("n", "ss", ":w<CR>", opts)
 
@@ -28,17 +26,23 @@ keymap("n", "<Esc>", "<Esc><cmd>NoiceDismiss<CR>", { desc = "Dismiss Noice Messa
 keymap({ "n", "v" }, "<Leader>/", "<cmd>normal gcc<cr>", { desc = "Toggle Comment" })
 -- close all
 keymap("n", "<C-x>", entity_close, opts)
--- formatting
-keymap({ "n", "v" }, "<leader>lf", function()
-  LazyVim.format({ force = true })
-end, { desc = "Format" })
-
 -- open ToggleTerm in float
 keymap("n", "<leader>tt", "<cmd>ToggleTerm direction=float<cr>", { desc = "Open Terminal" })
 
--- Setup WhichKey for LSP diagnostics
+-- formatting and LSP diagnostics
 wk.add({
   { "<leader>l", group = "LSP Actions", icon = "" },
+  {
+    "<leader>lf",
+    function()
+      LazyVim.format({ force = true })
+      -- local filename = vim.api.nvim_buf_get_name(0)
+      -- if filename:match("%.jsx?$") or filename:match("%.tsx?$") then
+      --   vim.cmd('!rustywind --config-file "/home/Abhishek/.config/rustywind/config.json" --write ' .. filename)
+      -- end
+    end,
+    desc = "Format",
+  },
   {
     "<leader>lj",
     function()

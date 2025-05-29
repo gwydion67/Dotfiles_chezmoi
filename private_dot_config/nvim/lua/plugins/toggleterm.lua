@@ -4,7 +4,7 @@ return {
     event = "VeryLazy",
     version = "*",
     keys = {
-      { "<C-.>", mode = { "t" }, "<C-\\><C-N>", desc = "Normal mode in terminal" },
+      { "<Esc><Esc>", mode = { "t" }, "<C-\\><C-N>", desc = "Normal mode in terminal" },
       { "<C-t>", mode = { "n", "t" }, "<cmd>ToggleTerm<CR>", desc = "Toggle terminal" },
     },
     opts = {

@@ -259,7 +259,6 @@ weather() {
 # Replace some more things with better alternatives
 alias cat='bat --style header --style snip --style changes --style header'
 
-alias sdf='sesh connect "$(sesh list -i | gum filter --limit 1 --placeholder "pick a sesh" --prompt='⚡' )" '
 
 alias ls='exa -a --color=always --group-directories-first --icons' # preferred listing
 alias la='exa -a --color=always --group-directories-first --icons'  # all files and dirs
@@ -286,7 +285,7 @@ export GOCACHE='/home/Abhishek/D_drive/0LINUX_D-N-O/app-data/golang/cache'
 export GOBIN='/home/Abhishek/D_drive/0LINUX_D-N-O/app-data/golang/bin'
 
 
-export PATH=$PATH:'/home/Abhishek/.local/share/gem/ruby/3.3.0/bin'
+export PATH=$PATH:'/home/Abhishek/.local/share/gem/ruby/3.4.0/bin/'
 export PATH="$PATH:/home/Abhishek/.local/bin"
 export ZDOTDIR='/home/Abhishek/.config/zsh'
 

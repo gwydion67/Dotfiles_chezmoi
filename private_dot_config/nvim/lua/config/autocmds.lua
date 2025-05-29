@@ -20,3 +20,4 @@ vim.api.nvim_create_autocmd("User", {
     vim.b.copilot_suggestion_hidden = false
   end,
 })
+
