@@ -233,6 +233,13 @@ spfd() {
     }
 }
 
+# gemini commit
+if command -v geminicommit &> /dev/null; then
+    alias gmc=geminicommit
+else
+    echo "Warning: gemincommit is not installed"
+fi
+
 # Cleanup orphaned packages
 alias cleanup='sudo pacman -Rns $(pacman -Qtdq)'
 
@@ -347,5 +354,6 @@ export TAVILY_API_KEY="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"
 ## PYENV
 export PYENV_ROOT="$HOME/D_drive/0LINUX_D-N-O/app-data/pyenv"
 [[ -d $PYENV_ROOT/bin ]] && export PATH="$PYENV_ROOT/bin:$PATH"
+[[ -d $PYENV_ROOT/bin ]] && export PATH="$PYENV_ROOT/versions:$PATH"
 eval "$(pyenv init - zsh)"
 # export PYENV_VIRTUALENVWRAPPER_PREFER_PYVENV="true"

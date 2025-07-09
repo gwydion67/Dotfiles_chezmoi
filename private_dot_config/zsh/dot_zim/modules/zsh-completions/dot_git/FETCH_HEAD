@@ -1,4 +1,5 @@
-978e79e12c44b5b1d3e1e2920c537002087b82c2		branch 'master' of https://github.com/zsh-users/zsh-completions
+e07f6fb780725e9c0f50a7666700cf91ded30222		branch 'master' of https://github.com/zsh-users/zsh-completions
+2a912506bdb14fac406576759c90786c576604e1	not-for-merge	branch 'revert-1133-update-nodejs' of https://github.com/zsh-users/zsh-completions
 1f8a0c9d92efb2da0c476e395d5ed5050f06399b	not-for-merge	tag '0.1.0' of https://github.com/zsh-users/zsh-completions
 662229f6f0ce391ef7c1a41c398e28a31e847182	not-for-merge	tag '0.10.0' of https://github.com/zsh-users/zsh-completions
 c75296de9cafeb360066065acbf2935964d70431	not-for-merge	tag '0.11.0' of https://github.com/zsh-users/zsh-completions
