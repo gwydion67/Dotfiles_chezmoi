@@ -7,3 +7,5 @@ local function welcome()
   vim.notify(msg, vim.log.levels.INFO, { title = "LazyVim" })
 end
 welcome()
+
+
