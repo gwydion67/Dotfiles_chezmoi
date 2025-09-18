@@ -1,4 +1,4 @@
-#files: 870	version: 5.9
+#files: 875	version: 5.9
 
 _comps=(
 '-' '_precommand'
@@ -597,6 +597,8 @@ _comps=(
 'hostnamectl' '_hostnamectl'
 'hotjava' '_webbrowser'
 'htop' '_htop'
+'hyprctl' '_hyprctl'
+'hyprpm' '_hyprpm'
 'iceweasel' '_mozilla'
 'icombine' '_ispell'
 'iconv' '_iconv'
@@ -899,6 +901,7 @@ _comps=(
 'opusdec' '_opustools'
 'opusenc' '_opustools'
 'opusinfo' '_opustools'
+'p11-kit' '_p11-kit'
 'p4' '_perforce'
 'p4d' '_perforce'
 'pacat' '_pulseaudio'
@@ -1202,6 +1205,7 @@ _comps=(
 'spamassassin' '_spamassassin'
 'split' '_split'
 'splitdiff' '_patchutils'
+'spt' '_spt'
 'sqlite' '_sqlite'
 'sqlite3' '_sqlite'
 'sqsh' '_sqsh'
@@ -1324,6 +1328,7 @@ _comps=(
 'true' '_nothing'
 'truncate' '_truncate'
 'truss' '_truss'
+'trust' '_trust'
 'tryaffix' '_ispell'
 'tty' '_tty'
 'ttyctl' '_ttyctl'
@@ -1719,20 +1724,21 @@ autoload -Uz _atuin _bat _bluetoothctl _bootctl _busctl \
             _coredumpctl _ctr _curl _cyme _ddgr \
             _delta _dkms _docker _dolphin _dotnet \
             _downgrade _exercism _eza _fastfetch _fd \
-            _geminicommit _gh _gum _hostnamectl _img2sixel \
-            _insmod _journalctl _kde-inhibit _kernel-install _keyring \
-            _kitty _krunner _kscreen-doctor _libinput _localectl \
-            _loginctl _lsmod _luarocks _luarocks-admin _machinectl \
-            _mkinitcpio _mpv _networkctl _ninja _oomctl \
-            _paccache _pacdiff _pacignore _paclist _paclog-pkglist \
-            _pacman _pacscripts _pacsearch _pacsort _pactree \
-            _pip _pkgfile _plasmashell _poetry _powerprofilesctl \
-            _pulseaudio _pyenv _qpdf _rankmirrors _resolvectl \
-            _rg _rmmod _run0 _scrcpy _sd_hosts_or_user_at_host \
-            _sd_machines _sd_outputmodes _sd_unit_files _sensors _sensors-detect \
-            _starship _systemctl _systemd _systemd-analyze _systemd-delta \
-            _systemd-inhibit _systemd-nspawn _systemd-path _systemd-run _systemd-tmpfiles \
-            _systemsettings _timedatectl _tldr _udevadm _udisks2 \
+            _geminicommit _gh _gum _hostnamectl _hyprctl \
+            _hyprpm _img2sixel _insmod _journalctl _kde-inhibit \
+            _kernel-install _keyring _kitty _krunner _kscreen-doctor \
+            _libinput _localectl _loginctl _lsmod _luarocks \
+            _luarocks-admin _machinectl _mkinitcpio _mpv _networkctl \
+            _ninja _oomctl _p11-kit _paccache _pacdiff \
+            _pacignore _paclist _paclog-pkglist _pacman _pacscripts \
+            _pacsearch _pacsort _pactree _pip _pkgfile \
+            _plasmashell _poetry _powerprofilesctl _pulseaudio _pyenv \
+            _qpdf _rankmirrors _resolvectl _rg _rmmod \
+            _run0 _scrcpy _sd_hosts_or_user_at_host _sd_machines _sd_outputmodes \
+            _sd_unit_files _sensors _sensors-detect _spt _starship \
+            _systemctl _systemd _systemd-analyze _systemd-delta _systemd-inhibit \
+            _systemd-nspawn _systemd-path _systemd-run _systemd-tmpfiles _systemsettings \
+            _timedatectl _tldr _trust _udevadm _udisks2 \
             _updpkgsums _upower _varlinkctl _wl-copy _wl-paste \
             _wpctl _yay _yt-dlp _zoxide _cdr \
             _all_labels _all_matches _alternative _approximate _arg_compile \

@@ -304,6 +304,10 @@ export NVM_COMPLETION=true
 # [ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
 
 alias svenv='source /home/Abhishek/D_drive/0LINUX_D-N-O/app-data/python-venvs/.venvs/MyEnv/bin/activate'
+senv() {
+    local venv_path=${1:-$(pwd)/env}
+    source "$venv_path/bin/activate"
+}
 
 source ~/.zsh/zsh-autosuggestions/zsh-autosuggestions.zsh
 
