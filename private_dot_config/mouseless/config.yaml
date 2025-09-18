@@ -1,0 +1,115 @@
+# the keyboard devices it reads from, if no devices are specified, it reads from all
+devices:
+# - "/dev/input/by-id/SOME_KEYBOARD_REPLACE_ME-event-kbd"
+
+# this is executed when mouseless starts, e.g. useful for setting the keyboard layout
+# startCommand: "setxkbmap de"
+
+# the rate at which the mouse pointer moves (in ms)
+mouseLoopInterval: 20
+
+# the default speed for mouse movement and scrolling
+baseMouseSpeed: 750.0
+baseScrollSpeed: 20.0
+
+# the time it takes to accelerate to baseMouseSpeed (in ms), 0 to reach top speed immediately
+mouseAccelerationTime: 200.0
+# the shape of the acceleration curve, 1.0 is linear, higher values have more time at low speeds
+mouseAccelerationCurve: 2.0
+# speed of the mouse when it starts moving
+startMouseSpeed: 0.0
+# same for deceleration
+mouseDecelerationTime: 300.0
+mouseDecelerationCurve: 3.0
+
+# enables auto-repeat of a tap key when pressed twice within this duration
+quickTapTime: 150
+# two keys must be pressed within this duration to activate a combo (e.g. f+d)
+comboTime: 25
+
+# the rest of the config defines the layers with their bindings
+layers:
+  # the first layer is active at start
+  - name: initial
+    bindings:
+      # when tab is held and another key pressed, activate mouse layer
+      f1: tap-hold-next f1 ; toggle-layer mouse ; 300
+      # a: tap-hold a ; toggle-layer mouse ; 1000
+      # right alt key toggles arrows layer
+      f2: tap-hold-next f2; toggle-layer arrows ; 300
+      capslock: tap-hold-next esc ; toggle-layer leftM ; 300
+      compose: tap-hold-next compose ; toggle-layer rightM ; 300
+      # esc: capslock
+      # rightshift+leftshift: capslock
+      # switch escape with capslock
+      # key combos are activated when both keys are pressed simultaneously
+      # when a is held for 300ms, activate mouse layer
+      # esc: capslock
+      # f+d: layer mouse
+  # a layer for mouse movement
+  - name: mouse
+    # when true, keys that are not mapped keep their original meaning
+    passThrough: true
+    # these commands are executed when the layer is entered/exited
+    enterCommand: exec notify-send "mouse layer entered"
+    exitCommand: exec notify-send "mouse layer exited"
+    bindings:
+      # quit mouse layer
+      q: layer initial
+      # keep the mouse layer active
+      space: layer mouse
+      a: layer arrow
+      r: reload-config
+      l: move  1  0
+      j: move -1  0
+      k: move  0  1
+      i: move  0 -1
+      p: scroll up
+      n: scroll down
+      leftalt: speed 4.0
+      e: speed 0.3
+      capslock: speed 0.1
+      f: button left
+      d: button middle
+      s: button right
+      # # move to the top left corner
+      # k0: "exec xdotool mousemove 0 0"
+
+  - name: rightM
+
+    passThrough: true
+    bindings:
+      space: layer righttM
+      m: rightmeta
+      comma: rightctrl
+      dot: rightshift
+      slash: rightalt
+      j: rightalt
+      k: rightmeta
+      l: rightctrl
+      semicolon: rightshift
+
+  - name: leftM
+    passThrough: true
+    bindings:
+      space: layer leftM
+      a: leftctrl
+      s: leftmeta
+      d: leftshift
+      f: leftalt
+  # another layer for arrows and some other keys
+  - name: arrows
+    passThrough: false
+
+    bindings:
+      space: layer arrows
+      j: left
+      k: down
+      i: up
+      l: right
+      x: backspace
+      q: esc
+      d: delete
+      # _ is the wildcard key, which matches any key that is not mapped
+      # _: rightalt+_
+      # capslock: esc
