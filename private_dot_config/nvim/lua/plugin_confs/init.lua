@@ -6,4 +6,4 @@
 require("plugin_confs.render-markdown-conf")
 require("plugin_confs.mini-snippets")
 require("plugin_confs.lualine")
--- require("plugin_confs.lspconfig")
+require("plugin_confs.lspconfig")

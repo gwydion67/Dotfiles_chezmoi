@@ -38,7 +38,7 @@ layers:
       # right alt key toggles arrows layer
       f2: tap-hold-next f2; toggle-layer arrows ; 300
       capslock: tap-hold-next esc ; toggle-layer leftM ; 300
-      compose: tap-hold-next compose ; toggle-layer rightM ; 300
+      enter: tap-hold-next enter ; toggle-layer rightM ; 300
       # esc: capslock
       # rightshift+leftshift: capslock
       # switch escape with capslock
@@ -52,7 +52,7 @@ layers:
     passThrough: true
     # these commands are executed when the layer is entered/exited
     enterCommand: exec notify-send "mouse layer entered"
-    exitCommand: exec notify-send "mouse layer exited"
+    # exitCommand: exec notify-send "mouse layer exited"
     bindings:
       # quit mouse layer
       q: layer initial
@@ -61,19 +61,19 @@ layers:
       a: layer arrow
       r: reload-config
       l: move  1  0
-      j: move -1  0
-      k: move  0  1
-      i: move  0 -1
+      h: move -1  0
+      j: move  0  1
+      k: move  0 -1
       p: scroll up
       n: scroll down
       leftalt: speed 4.0
       e: speed 0.3
       capslock: speed 0.1
-      f: button left
-      d: button middle
-      s: button right
+      o: button right
+      i: button middle
+      u: button left
       # # move to the top left corner
-      # k0: "exec xdotool mousemove 0 0"
+      # 0: "exec xdotool mousemove 0 0"
 
   - name: rightM
 
@@ -84,22 +84,23 @@ layers:
       comma: rightctrl
       dot: rightshift
       slash: rightalt
-      j: rightalt
       k: rightmeta
       l: rightctrl
       semicolon: rightshift
+      apostrophe: rightalt
 
   - name: leftM
     passThrough: true
     bindings:
       space: layer leftM
-      a: leftctrl
-      s: leftmeta
+      a: leftmeta
+      s: leftctrl
       d: leftshift
       f: leftalt
   # another layer for arrows and some other keys
   - name: arrows
     passThrough: false
+    enterCommand: exec notify-send "arrow layer entered"
 
     bindings:
       space: layer arrows
@@ -110,6 +111,7 @@ layers:
       x: backspace
       q: esc
       d: delete
+      enter: enter
       # _ is the wildcard key, which matches any key that is not mapped
       # _: rightalt+_
       # capslock: esc

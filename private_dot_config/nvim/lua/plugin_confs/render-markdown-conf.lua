@@ -3,9 +3,9 @@ require("render-markdown").setup({
   -- There are two special states for unchecked & checked defined in the markdown grammar.
   checkbox = {
     custom = {
-      todo = { raw = "[-]", rendered = "󰥔 ", highlight = "RenderMarkdownTodo", scope_highlight = nil },
-      fire = { raw = "[f]", rendered = "🔥", highlight = "RenderMarkdownTodo", scope_highlight = nil },
-      cross = { raw = "[c]", rendered = "✗", highlight = "RenderMarkdownTodo", scope_highlight = nil },
+      todo = { raw = "[~]", rendered = "󰥔 ", highlight = "RenderMarkdownTodo", scope_highlight = nil },
+      fire = { raw = "[!]", rendered = "🔥", highlight = "RenderMarkdownTodo", scope_highlight = nil },
+      cross = { raw = "[>]", rendered = "✗", highlight = "RenderMarkdownTodo", scope_highlight = nil },
     },
   },
 })
