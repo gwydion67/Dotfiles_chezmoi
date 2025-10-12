@@ -1,3 +1,6 @@
+-- BLINK CONFIG WITH FEW CHANGED KEYBINDINGS THAN DEFAULT LAZYVIM
+
+
 return {
   {
     "saghen/blink.cmp",

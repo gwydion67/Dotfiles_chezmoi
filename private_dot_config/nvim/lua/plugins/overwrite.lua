@@ -1,3 +1,6 @@
+-- OVERWRITES FOR DEFAULT LAZYVIM SETTINS
+
+
 return {
   {
     "LazyVim/LazyVim",

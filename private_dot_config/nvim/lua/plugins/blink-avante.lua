@@ -1,3 +1,6 @@
+-- BLINK COMPATIBILITY LAYER FOR AVANTE
+
+
 return {
   {
     "saghen/blink.cmp",

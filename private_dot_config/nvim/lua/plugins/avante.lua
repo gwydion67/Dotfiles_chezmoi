@@ -1,3 +1,4 @@
+-- AVANTE , NVIM AI
 -- install nvim avante
 return {
   {

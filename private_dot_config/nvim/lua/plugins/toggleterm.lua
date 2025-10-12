@@ -1,3 +1,6 @@
+-- THE FLOATING TERMINAL
+
+
 return {
   {
     "akinsho/toggleterm.nvim",

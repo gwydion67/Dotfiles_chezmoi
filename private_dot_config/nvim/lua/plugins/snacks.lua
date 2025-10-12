@@ -1,3 +1,6 @@
+-- ADDING KEYMAPS AND CONFIGS FOR SNACKS.NVIM
+
+
 return {
   {
     "folke/snacks.nvim",

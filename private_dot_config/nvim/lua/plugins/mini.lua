@@ -1,3 +1,6 @@
+-- MINI .NVIM CONFIGS
+
+
 return {
   {
     "nvim-mini/mini.pairs",

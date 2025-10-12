@@ -1,3 +1,5 @@
+-- noice nvim for noice messages and looks
+
 return {
   {
     "folke/noice.nvim",
