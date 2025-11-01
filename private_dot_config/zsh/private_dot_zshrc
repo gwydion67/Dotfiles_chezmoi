@@ -284,8 +284,8 @@ export ANDROID_USER_HOME='/home/Abhishek/D_drive/0LINUX_D-N-O/app-data/android-s
 export PATH=$PATH:$ANDROID_HOME/emulator
 export PATH=$PATH:$ANDROID_HOME/platform-tools
 
-# Go env variables
 
+# Go env variables
 export GOPATH='/home/Abhishek/D_drive/0LINUX_D-N-O/app-data/golang/files'
 export GO111MODULE='on'
 export GOCACHE='/home/Abhishek/D_drive/0LINUX_D-N-O/app-data/golang/cache'
@@ -361,3 +361,4 @@ export PYENV_ROOT="$HOME/D_drive/0LINUX_D-N-O/app-data/pyenv"
 [[ -d $PYENV_ROOT/bin ]] && export PATH="$PYENV_ROOT/versions:$PATH"
 eval "$(pyenv init - zsh)"
 # export PYENV_VIRTUALENVWRAPPER_PREFER_PYVENV="true"
+

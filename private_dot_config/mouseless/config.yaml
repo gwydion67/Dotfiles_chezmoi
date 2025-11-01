@@ -51,7 +51,7 @@ layers:
     # when true, keys that are not mapped keep their original meaning
     passThrough: true
     # these commands are executed when the layer is entered/exited
-    enterCommand: exec notify-send "mouse layer entered"
+    enterCommand: exec notify-send "mouse layer entered" -t 200
     # exitCommand: exec notify-send "mouse layer exited"
     bindings:
       # quit mouse layer
@@ -99,8 +99,8 @@ layers:
       f: leftalt
   # another layer for arrows and some other keys
   - name: arrows
-    passThrough: false
-    enterCommand: exec notify-send "arrow layer entered"
+    passThrough: true
+    enterCommand: exec notify-send "arrow layer entered" -t 200
 
     bindings:
       space: layer arrows

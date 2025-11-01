@@ -1,4 +1,4 @@
-#files: 1037	version: 5.9
+#files: 1042	version: 5.9
 
 _comps=(
 '-' '_precommand'
@@ -53,6 +53,7 @@ _comps=(
 'appletviewer' '_java'
 'apropos' '_man'
 'apvlv' '_pdf'
+'arch-chroot' '_arch-chroot'
 'archlinux-java' '_archlinux-java'
 'arduino-ctags' '_ctags'
 'arecord' '_alsa-utils'
@@ -381,6 +382,7 @@ _comps=(
 'fc-list' '_xft_fonts'
 'fc-match' '_xft_fonts'
 'fd' '_fd'
+'feedgnuplot' '_feedgnuplot'
 'feh' '_feh'
 'fetchmail' '_fetchmail'
 'ffind' '_ffind'
@@ -406,6 +408,7 @@ _comps=(
 'fixwpps' '_psutils'
 'fixwwps' '_psutils'
 'flac' '_flac'
+'flatpak' '_flatpak'
 'fleetctl' '_fleetctl'
 'flex' '_flex'
 'flex++' '_flex'
@@ -465,6 +468,7 @@ _comps=(
 'geany' '_geany'
 'gegrep' '_grep'
 'gem' '_gem'
+'genfstab' '_genfstab'
 'genisoimage' '_genisoimage'
 'genv' '_env'
 'get' '_sccs'
@@ -1031,6 +1035,7 @@ _comps=(
 'pacscripts' '_pacscripts'
 'pacsearch' '_pacsearch'
 'pacsort' '_pacsort'
+'pacstrap' '_pacstrap'
 'pactl' '_pulseaudio'
 'pactree' '_pactree'
 'padsp' '_pulseaudio'
@@ -1936,19 +1941,20 @@ autoload -Uz _git-branch-delete-interactive _afew _age _android _archlinux-java 
             _tmuxinator _tmuxp _tox _tsc _ts-node \
             _udisksctl _ufw _uuidgen _virtualbox _vnstat \
             _wemux _wg-quick _xsel _yarn _yfm \
-            _zcash-cli _atuin _bat _bluetoothctl _bootctl \
-            _busctl _bwrap _cargo _checkupdates _chezmoi \
-            _code _coredumpctl _ctr _curl _cyme \
-            _ddgr _delta _dkms _docker _dolphin \
-            _dotnet _downgrade _exercism _eza _fastfetch \
-            _fd _geminicommit _gh _gum _hostnamectl \
-            _hyprctl _hyprpm _img2sixel _insmod _journalctl \
-            _kde-inhibit _kernel-install _keyring _kitty _konsole \
-            _krunner _kscreen-doctor _libinput _localectl _loginctl \
-            _lsmod _luarocks _luarocks-admin _machinectl _mkinitcpio \
-            _mpv _networkctl _ninja _oomctl _p11-kit \
-            _paccache _pacdiff _pacignore _paclist _paclog-pkglist \
-            _pacman _pacscripts _pacsearch _pacsort _pactree \
+            _zcash-cli _arch-chroot _atuin _bat _bluetoothctl \
+            _bootctl _busctl _bwrap _cargo _checkupdates \
+            _chezmoi _code _coredumpctl _ctr _curl \
+            _cyme _ddgr _delta _dkms _docker \
+            _dolphin _dotnet _downgrade _exercism _eza \
+            _fastfetch _fd _feedgnuplot _flatpak _geminicommit \
+            _genfstab _gh _gum _hostnamectl _hyprctl \
+            _hyprpm _img2sixel _insmod _journalctl _kde-inhibit \
+            _kernel-install _keyring _kitty _konsole _krunner \
+            _kscreen-doctor _libinput _localectl _loginctl _lsmod \
+            _luarocks _luarocks-admin _machinectl _mkinitcpio _mpv \
+            _networkctl _ninja _oomctl _p11-kit _paccache \
+            _pacdiff _pacignore _paclist _paclog-pkglist _pacman \
+            _pacscripts _pacsearch _pacsort _pacstrap _pactree \
             _pip _pkgfile _plasmashell _poetry _powerprofilesctl \
             _pulseaudio _pyenv _qpdf _rankmirrors _resolvectl \
             _rg _rmmod _run0 _scrcpy _sd_hosts_or_user_at_host \

@@ -6,7 +6,17 @@ local function welcome()
   local msg = "Welcome to LazyVim! Enjoy coding❕"
   vim.notify(msg, vim.log.levels.INFO, { title = "LazyVim" })
 end
-welcome()
+-- welcome()
+
+local ok, keys = pcall(require, "secrets")
+if not ok then
+  vim.notify("Failed to load API keys from secrets/api_keys.lua", vim.log.levels.ERROR)
+else
+  -- Set environment variables for keys
+  for name, key in pairs(keys) do
+    vim.env[name:upper()] = key
+  end
+end
 
 vim.g.firenvim_config = {
   globalSettings = { alt = "all" },
