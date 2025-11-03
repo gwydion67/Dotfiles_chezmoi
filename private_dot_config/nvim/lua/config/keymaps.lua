@@ -45,25 +45,27 @@ keymap({ "n", "v" }, "<Leader>/", "<cmd>normal gcc<cr>", { desc = "Toggle Commen
 -- close all
 keymap("n", "<C-x>", entity_close, opts)
 
-
-keymap(
-  {"n","i"},
-  "<Esc>",
-  function ( )
-    local MiniSnippets = require('mini.snippets');
-    if MiniSnippets.session then
-      MiniSnippets.session.stop()
-    end
-    vim.cmd.NoiceDismiss()
-    vim.cmd.noh();
-    vim.api.nvim_feedkeys(vim.api.nvim_replace_termcodes("<Esc>", true, false, true), "n", false)
-  end,
-  { desc = "Dismiss Noice Message, Remove Highlights & Stop Snippet" }
-)
+keymap({ "n", "i" }, "<Esc>", function()
+  local MiniSnippets = require("mini.snippets")
+  if MiniSnippets.session then
+    MiniSnippets.session.stop()
+  end
+  vim.cmd.NoiceDismiss()
+  vim.cmd.noh()
+  vim.api.nvim_feedkeys(vim.api.nvim_replace_termcodes("<Esc>", true, false, true), "n", false)
+end, { desc = "Dismiss Noice Message, Remove Highlights & Stop Snippet" })
 vim.keymap.del("n", "<leader>l")
 ------
 
 wk.add({
+  -- Buffer Manager
+  {
+    "<leader>be",
+    function()
+      require("buffer_manager.ui").toggle_quick_menu()
+    end,
+    desc = "Open buffer manager ",
+  },
   -- formatting and LSP diagnostics
   { "<leader>l", group = "LSP Actions", icon = "" },
   {

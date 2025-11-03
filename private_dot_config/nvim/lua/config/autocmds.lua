@@ -20,4 +20,11 @@
 --     vim.b.copilot_suggestion_hidden = false
 --   end,
 -- })
---
+
+vim.api.nvim_create_autocmd("FileType", {
+  pattern = "buffer_manager",
+  callback = function()
+    vim.api.nvim_command("vnoremap <silent> J :m '>+1<CR>gv=gv")
+    vim.api.nvim_command("vnoremap <silent> K :m '<-2<CR>gv=gv")
+  end,
+})
