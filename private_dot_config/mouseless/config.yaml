@@ -38,7 +38,7 @@ layers:
       # right alt key toggles arrows layer
       f2: tap-hold-next f2; toggle-layer arrows ; 300
       capslock: tap-hold-next esc ; toggle-layer leftM ; 300
-      enter: tap-hold-next enter ; toggle-layer rightM ; 300
+      apostrophe: tap-hold-next apostrophe ; toggle-layer rightM ; 200
       # esc: capslock
       # rightshift+leftshift: capslock
       # switch escape with capslock
@@ -80,14 +80,15 @@ layers:
     passThrough: true
     bindings:
       space: layer righttM
-      m: rightmeta
-      comma: rightctrl
-      dot: rightshift
-      slash: rightalt
-      k: rightmeta
+      # m: rightmeta
+      # comma: rightctrl
+      # dot: rightshift
+      # slash: rightalt
+      j: rightalt
+      k: rightshift
       l: rightctrl
-      semicolon: rightshift
-      apostrophe: rightalt
+      semicolon: rightmeta
+      # apostrophe: rightalt
 
   - name: leftM
     passThrough: true
@@ -104,9 +105,9 @@ layers:
 
     bindings:
       space: layer arrows
-      j: left
-      k: down
-      i: up
+      j: down
+      k: up
+      h: left
       l: right
       x: backspace
       q: esc

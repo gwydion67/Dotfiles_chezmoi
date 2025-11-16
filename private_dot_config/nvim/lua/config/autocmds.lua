@@ -28,3 +28,26 @@ vim.api.nvim_create_autocmd("FileType", {
     vim.api.nvim_command("vnoremap <silent> K :m '<-2<CR>gv=gv")
   end,
 })
+
+-- In your Neovim config (init.lua or a plugin file)
+vim.api.nvim_create_autocmd("VimResized", {
+  pattern = "*.md",
+  callback = function()
+    local width = vim.o.columns
+    local config = {
+      config = {
+        MD013 = {
+          line_length = width - 10, -- Leave some margin
+          code_blocks = false,
+          tables = false,
+        },
+      },
+    }
+    local config_file = vim.fn.stdpath("config") .. "/.markdownlint-cli2.jsonc"
+    local f = io.open(config_file, "w")
+    if f then
+      f:write(vim.json.encode(config))
+      f:close()
+    end
+  end,
+})

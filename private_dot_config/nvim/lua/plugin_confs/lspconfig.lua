@@ -12,4 +12,3 @@ require("lspconfig").clangd.setup({
   },
 })
 
-
