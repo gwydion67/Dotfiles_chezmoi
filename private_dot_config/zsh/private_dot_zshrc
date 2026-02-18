@@ -212,33 +212,35 @@ wrandom(){
   wallheaven $@ -r $keyword 
 }
 
-spfd() {
-    os=$(uname -s)
-
-    # Linux
-    if [[ "$os" == "Linux" ]]; then
-        export SPF_LAST_DIR="${XDG_STATE_HOME:-$HOME/.local/state}/superfile/lastdir"
-    fi
-
-    # macOS
-    if [[ "$os" == "Darwin" ]]; then
-        export SPF_LAST_DIR="$HOME/Library/Application Support/superfile/lastdir"
-    fi
-
-    command spf "$@"
-
-    [ ! -f "$SPF_LAST_DIR" ] || {
-        . "$SPF_LAST_DIR"
-        rm -f -- "$SPF_LAST_DIR" > /dev/null
-    }
+function y() {
+	local tmp="$(mktemp -t "yazi-cwd.XXXXXX")" cwd
+	yazi "$@" --cwd-file="$tmp"
+	IFS= read -r -d '' cwd < "$tmp"
+	[ -n "$cwd" ] && [ "$cwd" != "$PWD" ] && builtin cd -- "$cwd"
+	rm -f -- "$tmp"
 }
 
-# gemini commit
-if command -v geminicommit &> /dev/null; then
-    alias gmc=geminicommit
-else
-    echo "Warning: gemincommit is not installed"
-fi
+# spfd() {
+#     os=$(uname -s)
+#
+#     # Linux
+#     if [[ "$os" == "Linux" ]]; then
+#         export SPF_LAST_DIR="${XDG_STATE_HOME:-$HOME/.local/state}/superfile/lastdir"
+#     fi
+#
+#     # macOS
+#     if [[ "$os" == "Darwin" ]]; then
+#         export SPF_LAST_DIR="$HOME/Library/Application Support/superfile/lastdir"
+#     fi
+#
+#     command spf "$@"
+#
+#     [ ! -f "$SPF_LAST_DIR" ] || {
+#         . "$SPF_LAST_DIR"
+#         rm -f -- "$SPF_LAST_DIR" > /dev/null
+#     }
+# }
+#
 
 # Cleanup orphaned packages
 alias cleanup='sudo pacman -Rns $(pacman -Qtdq)'
