@@ -1,0 +1,114 @@
+pinch:
+  2:
+    in:
+      sendkey: 'LEFTCTRL+MINUS'
+      threshold: 0.3
+      interval: 0.3
+    out:
+      sendkey: 'LEFTCTRL+KPPLUS'
+      threshold: 0.3
+      interval: 0.3
+  3: 
+    in:
+      sendkey: 'LEFTMETA+RIGHT'
+      clearmodifiers: true
+      threshold: 0.2
+      interval: 1
+    out:
+      sendkey: 'LEFTMETA+LEFT'
+      clearmodifiers: true
+      threshold: 0.2
+      interval: 1
+ 
+
+swipe:
+  3:
+    up:
+      sendkey: 'LEFTMETA+PAGEUP'
+      # window: maximized
+      clearmodifiers: true
+      interval: 1
+      threshold: 0.5
+      keypress:
+        LEFTALT:
+          window: fullscreen
+          clearmodifiers: true
+          interval: 1
+          threshold: 0.5
+
+    down:
+      sendkey: 'LEFTMETA+PAGEDOWN'
+      interval: 1
+      threshold: 0.5
+    right:
+      sendkey: 'LEFTMETA+RIGHT'
+      clearmodifiers: true
+      # keypress:
+      #   LEFTALT:
+      #     sendkey: 'xdotool key --clearmodifiers alt+Right'
+      #     interval : 1
+      #     threshold: 0.5
+    left:
+      sendkey: 'LEFTMETA+LEFT'
+      clearmodifiers: true
+      # keypress:
+      #   LEFTALT:
+      #     command: 'xdotool key --clearmodifiers alt+Left'
+      #     interval : 1
+      #     threshold: 0.5
+
+  4:
+    right:
+      # command: 'xdotool key Super+ctrl+Left'
+      # sendkey: 'LEFTMETA+LEFTCTRL+LEFT'
+      workspace: prev
+      clearmodifiers: true
+      interval: 0.5
+      threshold: 0.5
+    left:
+      # command: 'xdotool key Super+ctrl+Right'
+      # sendkey: 'LEFTMETA+LEFTCTRL+RIGHT'
+      workspace: next
+      clearmodifiers: true
+      interval: 0.5
+      threshold: 0.5
+    up:
+      sendkey: 'LEFTMETA+g'
+      clearmodifiers: true
+      keypress:
+        LEFTSHIFT:
+          sendkey: 'VOLUMEUP'
+          clearmodifiers: true
+          interval: 0
+          threshold: 0
+    down:
+      # sendkey: 'PLAYPAUSE'
+      # clearmodifiers: true
+      sendkey: 'LEFTMETA+w'
+      clearmodifiers: true
+      keypress:
+        LEFTSHIFT:
+          sendkey: 'VOLUMEDOWN'
+          clearmodifiers: true
+          interval: 0
+          threshold: 0
+
+      
+hold: 
+  4: 
+    end:
+      sendkey: 'PLAYPAUSE'
+      clearmodifiers: true
+
+
+
+plugin:
+  executors:
+    wmctrl_executor: 
+      wrap-navigation: true
+    sendkey_executor:
+      device_name: 'AT Translated Set 2 keyboard'
+  inputs:
+    libinput_command_input: # options for lib/plugin/inputs/libinput_command_input
+      verbose: true
+      show-keycodes: true # https://github.com/iberianpig/fusuma-plugin-keypress#add-show-keycode-option
