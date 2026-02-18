@@ -12,3 +12,6 @@ require("lspconfig").clangd.setup({
   },
 })
 
+require("lspconfig").qmlls.setup({
+  cmd = { "qmlls", "-E" },
+})
