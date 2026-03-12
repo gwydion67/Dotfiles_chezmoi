@@ -1,4 +1,4 @@
-require("lspconfig").clangd.setup({
+vim.lsp.config("clangd", {
   cmd = {
     "/usr/bin/clangd",
     "--background-index",
@@ -12,6 +12,18 @@ require("lspconfig").clangd.setup({
   },
 })
 
-require("lspconfig").qmlls.setup({
+vim.lsp.config("qmlls", {
   cmd = { "qmlls", "-E" },
+})
+
+vim.lsp.config("lua_ls", {
+  capabilities = capabilities,
+  settings = {
+    Lua = {
+      workspace = {
+        library = vim.api.nvim_get_runtime_file("", true),
+      },
+      telemetry = { enable = false },
+    },
+  },
 })

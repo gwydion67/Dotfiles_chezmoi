@@ -1,6 +1,4 @@
 -- MAKING TOKYONIGHT TRANSPARENT
-
-
 return {
   {
     "folke/tokyonight.nvim",

@@ -72,6 +72,7 @@ wk.add({
     "<leader>lf",
     function()
       LazyVim.format({ force = true })
+      -- require("conform").format()
       -- local filename = vim.api.nvim_buf_get_name(0)
       -- if filename:match("%.jsx?$") or filename:match("%.tsx?$") then
       --   vim.cmd('!rustywind --config-file "/home/Abhishek/.config/rustywind/config.json" --write ' .. filename)

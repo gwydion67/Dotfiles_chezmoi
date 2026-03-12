@@ -64,8 +64,8 @@ layers:
       h: move -1  0
       j: move  0  1
       k: move  0 -1
-      p: scroll up
-      n: scroll down
+      comma: scroll up
+      dot: scroll down
       leftalt: speed 4.0
       e: speed 0.3
       capslock: speed 0.1
