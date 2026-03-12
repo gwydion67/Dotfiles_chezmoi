@@ -6,7 +6,7 @@ local function welcome()
   local msg = "Welcome to LazyVim! Enjoy coding❕"
   vim.notify(msg, vim.log.levels.INFO, { title = "LazyVim" })
 end
--- welcome()
+welcome()
 
 local ok, keys = pcall(require, "secrets")
 if not ok then
