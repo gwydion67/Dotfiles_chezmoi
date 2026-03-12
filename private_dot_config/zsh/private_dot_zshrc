@@ -353,8 +353,6 @@ export VCPKG_ROOT="$HOME/.local/share/vcpkg"
 ## Enconre backend server 
 export ENCORE_INSTALL="/home/Abhishek/.encore"
 export PATH="$ENCORE_INSTALL/bin:$PATH"
-export TAVILY_API_KEY="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"
-
 
 ## PYENV
 export PYENV_ROOT="$HOME/D_drive/0LINUX_D-N-O/app-data/pyenv"
