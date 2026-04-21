@@ -17,13 +17,13 @@
             }
         },
         "padding": {
-            "scale": 1
+            "scale": 0.9601324314024391
         },
         "rounding": {
-            "scale": 1
+            "scale": 0.9895722179878049
         },
         "spacing": {
-            "scale": 1
+            "scale": 0.9595436356707316
         },
         "transparency": {
             "base": 0.85,
@@ -38,7 +38,7 @@
                 "enabled": false,
                 "opacity": 0.7
             },
-            "enabled": false,
+            "enabled": true,
             "invertColors": false,
             "position": "bottom-right",
             "scale": 1,
@@ -52,16 +52,19 @@
         "visualiser": {
             "autoHide": true,
             "blur": false,
-            "enabled": false,
+            "enabled": true,
             "rounding": 1,
             "spacing": 1
         }
     },
     "bar": {
         "activeWindow": {
+            "compact": true,
             "inverted": false
         },
         "clock": {
+            "background": true,
+            "showDate": true,
             "showIcon": true
         },
         "dragThreshold": 20,
@@ -119,17 +122,17 @@
         },
         "showOnHover": true,
         "status": {
-            "showAudio": false,
+            "showAudio": true,
             "showBattery": true,
             "showBluetooth": true,
             "showKbLayout": false,
             "showLockStatus": true,
-            "showMicrophone": false,
+            "showMicrophone": true,
             "showNetwork": true,
             "showWifi": true
         },
         "tray": {
-            "background": false,
+            "background": true,
             "compact": false,
             "iconSubs": [
             ],
@@ -140,6 +143,7 @@
             "activeLabel": "󰮯",
             "activeTrail": false,
             "label": "  ",
+            "maxWindowIcons": 3,
             "occupiedBg": false,
             "occupiedLabel": "󰮯",
             "perMonitorWorkspaces": true,
@@ -161,6 +165,9 @@
         "dragThreshold": 50,
         "enabled": true,
         "mediaUpdateInterval": 500,
+        "performance": {
+            "showNetwork": true
+        },
         "showOnHover": true
     },
     "general": {
@@ -172,10 +179,10 @@
                 "dolphin"
             ],
             "playback": [
-                "mpv"
+                "vlc"
             ],
             "terminal": [
-                "foot"
+                "kitty"
             ]
         },
         "battery": {
@@ -341,9 +348,7 @@
             },
             {
                 "command": [
-                    "loginctl",
-                    "terminate-user",
-                    ""
+                    "hyprshutdown"
                 ],
                 "dangerous": true,
                 "description": "Log out of the current session",
@@ -388,7 +393,10 @@
             }
         ],
         "dragThreshold": 50,
-        "enableDangerousActions": false,
+        "enableDangerousActions": true,
+        "favouriteApps": [
+            "zen"
+        ],
         "hiddenApps": [
         ],
         "maxShown": 7,
@@ -402,7 +410,7 @@
             "variants": false,
             "wallpapers": false
         },
-        "vimKeybinds": false
+        "vimKeybinds": true
     },
     "lock": {
         "recolourLogo": false
@@ -412,7 +420,7 @@
         "clearThreshold": 0.3,
         "defaultExpireTimeout": 5000,
         "expandThreshold": 20,
-        "expire": false,
+        "expire": true,
         "openExpanded": false
     },
     "osd": {
@@ -431,6 +439,7 @@
         "brightnessIncrement": 0.1,
         "defaultPlayer": "Spotify",
         "gpuType": "",
+        "lyricsBackend": "Auto",
         "maxVolume": 1,
         "playerAliases": [
             {
@@ -438,6 +447,7 @@
                 "to": "YT Music"
             }
         ],
+        "showLyrics": false,
         "smartScheme": true,
         "useFahrenheit": false,
         "useTwelveHourClock": false,
@@ -451,9 +461,7 @@
                 "hibernate"
             ],
             "logout": [
-                "loginctl",
-                "terminate-user",
-                ""
+                "hyprshutdown"
             ],
             "reboot": [
                 "systemctl",
@@ -492,12 +500,6 @@
         "vpn": {
             "enabled": true,
             "provider": [
-                {
-                    "displayName": "Wireguard (Your VPN)",
-                    "enabled": false,
-                    "interface": "your-connection-name",
-                    "name": "wireguard"
-                }
             ]
         }
     }
