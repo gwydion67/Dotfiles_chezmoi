@@ -36,6 +36,7 @@ layers:
       f1: tap-hold-next f1 ; toggle-layer mouse ; 300
       # a: tap-hold a ; toggle-layer mouse ; 1000
       # right alt key toggles arrows layer
+      rightshift+leftshift: capslock
       f2: tap-hold-next f2; toggle-layer arrows ; 300
       capslock: tap-hold-next esc ; toggle-layer leftM ; 300
       apostrophe: tap-hold-next apostrophe ; toggle-layer rightM ; 200
@@ -87,7 +88,7 @@ layers:
       j: rightalt
       k: rightshift
       l: rightctrl
-      semicolon: rightmeta
+      semicolon: leftmeta
       # apostrophe: rightalt
 
   - name: leftM

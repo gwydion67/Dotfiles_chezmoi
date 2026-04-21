@@ -361,3 +361,9 @@ export PYENV_ROOT="$HOME/D_drive/0LINUX_D-N-O/app-data/pyenv"
 eval "$(pyenv init - zsh)"
 # export PYENV_VIRTUALENVWRAPPER_PREFER_PYVENV="true"
 
+
+[ -f /opt/miniconda3/etc/profile.d/conda.sh ] && source /opt/miniconda3/etc/profile.d/conda.sh
+
+
+export MANPAGER="nvim +Man!"
+export QT_QPA_PLATFORMTHEME=qt6ct
