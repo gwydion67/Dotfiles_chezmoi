@@ -1,7 +1,9 @@
+//StatusIcons.qml
 pragma ComponentBehavior: Bound
 
 import QtQuick
 import QtQuick.Layouts
+import QtQuick.Controls
 import Quickshell
 import Quickshell.Bluetooth
 import Quickshell.Services.UPower
@@ -9,6 +11,8 @@ import Caelestia.Config
 import qs.components
 import qs.services
 import qs.utils
+import Caelestia.Internal
+import qs.components.misc
 
 StyledRect {
     id: root
@@ -19,7 +23,7 @@ StyledRect {
     color: Colours.tPalette.m3surfaceContainer
     radius: Tokens.rounding.full
 
-    clip: true
+    // clip: true
     implicitWidth: Tokens.sizes.bar.innerWidth
     implicitHeight: iconColumn.implicitHeight + Tokens.padding.normal * 2 - (Config.bar.status.showLockStatus && !Hypr.capsLock && !Hypr.numLock ? iconColumn.spacing : 0)
 
@@ -98,6 +102,53 @@ StyledRect {
 
                     Behavior on implicitHeight {
                         Anim {}
+                    }
+                }
+            }
+        }
+
+        // network speed
+        WrappedLoader {
+            // Note: Make sure "name" matches whatever string your PopoutManager uses to route the Network popup!
+            name: "netSpeed"
+            active: Config.bar.status.showNetSpeed
+
+            sourceComponent: Item {
+                implicitWidth: Tokens.sizes.bar.innerWidth
+                implicitHeight: netCol.implicitHeight
+
+                Ref {
+                    service: NetworkUsage
+                }
+
+                // Compact bar display (FIXED: One line text, less cramped)
+                ColumnLayout {
+                    id: netCol
+                    anchors.horizontalCenter: parent.horizontalCenter
+                    spacing: 2
+
+                    StyledText {
+                        Layout.alignment: Qt.AlignHCenter
+                        text: {
+                            const f = NetworkUsage.formatBytes(NetworkUsage.downloadSpeed ?? 0);
+                            // Formats as "16K" instead of stacking awkwardly
+                            return f ? `${f.value.toFixed(0)}${f.unit[0]}` : "0B";
+                        }
+                        font.pixelSize: 12
+                        font.family: Tokens.font.family.mono
+                        font.weight: Font.Bold
+                        color: Colours.palette.m3tertiary
+                    }
+
+                    MaterialIcon {
+                        Layout.alignment: Qt.AlignHCenter
+                        text: "south"
+                        color: Colours.palette.m3tertiary
+                        font.pixelSize: 12
+                    }
+
+                    Item {
+                        implicitHeight: 4
                     }
                 }
             }
@@ -267,5 +318,28 @@ StyledRect {
         asynchronous: true
         Layout.alignment: Qt.AlignHCenter
         visible: active
+    }
+
+    component CardHeader: RowLayout {
+        property string icon
+        property string title
+        property color accentColor: Colours.palette.m3primary
+
+        Layout.fillWidth: true
+        spacing: Tokens.spacing.small
+
+        MaterialIcon {
+            text: parent.icon
+            fill: 1
+            color: parent.accentColor
+            font.pointSize: Tokens.spacing.large
+        }
+
+        StyledText {
+            Layout.fillWidth: true
+            text: parent.title
+            font.pointSize: Tokens.font.size.normal
+            elide: Text.ElideRight
+        }
     }
 }
