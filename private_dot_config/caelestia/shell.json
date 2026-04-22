@@ -147,7 +147,7 @@
             "occupiedBg": false,
             "occupiedLabel": "󰮯",
             "perMonitorWorkspaces": true,
-            "showWindows": true,
+            "showWindows": false,
             "shown": 5,
             "specialWorkspaceIcons": [
                 {
@@ -405,7 +405,7 @@
         "specialPrefix": "@",
         "useFuzzy": {
             "actions": false,
-            "apps": false,
+            "apps": true,
             "schemes": false,
             "variants": false,
             "wallpapers": false
@@ -432,14 +432,14 @@
     "paths": {
         "mediaGif": "root:/assets/bongocat.gif",
         "sessionGif": "root:/assets/kurukuru.gif",
-        "wallpaperDir": "~/Pictures/Wallpapers"
+        "wallpaperDir": "~/D_drive/0LINUX_D-N-O/wallpapers/"
     },
     "services": {
         "audioIncrement": 0.1,
         "brightnessIncrement": 0.1,
         "defaultPlayer": "Spotify",
         "gpuType": "",
-        "lyricsBackend": "Auto",
+        "lyricsBackend": "NetEase",
         "maxVolume": 1,
         "playerAliases": [
             {
@@ -447,7 +447,7 @@
                 "to": "YT Music"
             }
         ],
-        "showLyrics": false,
+        "showLyrics": true,
         "smartScheme": true,
         "useFahrenheit": false,
         "useTwelveHourClock": false,
@@ -500,6 +500,12 @@
         "vpn": {
             "enabled": true,
             "provider": [
+                {
+                    "displayName": "Cloudflare WARP",
+                    "enabled": true,
+                    "interface": "CloudflareWARP",
+                    "name": "warp"
+                }
             ]
         }
     }

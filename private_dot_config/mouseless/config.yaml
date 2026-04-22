@@ -80,7 +80,7 @@ layers:
 
     passThrough: true
     bindings:
-      space: layer righttM
+      # space: layer righttM
       # m: rightmeta
       # comma: rightctrl
       # dot: rightshift
@@ -94,7 +94,7 @@ layers:
   - name: leftM
     passThrough: true
     bindings:
-      space: layer leftM
+      # space: layer leftM
       a: leftmeta
       s: leftctrl
       d: leftshift
