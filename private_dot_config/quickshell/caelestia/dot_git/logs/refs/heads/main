@@ -2,3 +2,11 @@
 c7771bacb97fad0b5db0c055dd2bb6372e4abdef 1988ba600a7150a78688edcbd07aff2d4d36976d Abhishek Kumar <gwydionmaranio@gmail.com> 1776851674 +0530	merge origin/main: Merge made by the 'ort' strategy.
 1988ba600a7150a78688edcbd07aff2d4d36976d ebfc37193ff78c7dea88e8f972b022ead8b6bf9d Abhishek Kumar <gwydionmaranio@gmail.com> 1776872733 +0530	commit: add nework speed in taskbar
 ebfc37193ff78c7dea88e8f972b022ead8b6bf9d 0055d25835537ad66d40ebb48fd9c49d66879be7 Abhishek Kumar <gwydionmaranio@gmail.com> 1776874578 +0530	commit: add gitignore
+0055d25835537ad66d40ebb48fd9c49d66879be7 549cf6f45437505c499af44eb202041f055e1a07 Abhishek Kumar <gwydionmaranio@gmail.com> 1776934449 +0530	commit: feat: add corner actions support
+549cf6f45437505c499af44eb202041f055e1a07 4dfff51c826794069e972eaa877fc70b8aa4d6d4 Abhishek Kumar <gwydionmaranio@gmail.com> 1776937155 +0530	commit: feat: add corner actions with persistence and settings UI
+4dfff51c826794069e972eaa877fc70b8aa4d6d4 e38f8b963e11f4ffd01436f69d5306e85cc74fa3 Abhishek Kumar <gwydionmaranio@gmail.com> 1776937749 +0530	commit: fix: resolve blank corners settings page and deprecation warnings
+e38f8b963e11f4ffd01436f69d5306e85cc74fa3 2f118f283de0616b078bd416be42a844eee3e4d4 Abhishek Kumar <gwydionmaranio@gmail.com> 1776938819 +0530	commit: feat: improve corner actions persistence and hit area
+2f118f283de0616b078bd416be42a844eee3e4d4 fa19b0c38ab49380ab02d1d4b4608e731dc2075e Abhishek Kumar <gwydionmaranio@gmail.com> 1776941810 +0530	commit: fix(corner-actions): remove invalid hyprctl layerrule that interferes with pointer events
+fa19b0c38ab49380ab02d1d4b4608e731dc2075e 8d8a6140b66a77b7fbe513361c33bb87e6ac3c8b Abhishek Kumar <gwydionmaranio@gmail.com> 1776943002 +0530	commit: feat(corner): add proximity-based glow feedback
+8d8a6140b66a77b7fbe513361c33bb87e6ac3c8b 23b9548462a5af295ea246f167759b6381134827 Abhishek Kumar <gwydionmaranio@gmail.com> 1776943756 +0530	commit: fix(corner): use global cursor tracking for reliable glow feedback
+23b9548462a5af295ea246f167759b6381134827 d1ae5bfd4cc1679a973272599937c80e834f4f61 Abhishek Kumar <gwydionmaranio@gmail.com> 1776951498 +0530	commit: fix(corner): reduce window size to prevent blocking bar popovers

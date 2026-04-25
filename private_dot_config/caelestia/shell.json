@@ -13,7 +13,7 @@
                 "sans": "Rubik"
             },
             "size": {
-                "scale": 1
+                "scale": 0.9964862804878049
             }
         },
         "padding": {
@@ -186,7 +186,7 @@
             ]
         },
         "battery": {
-            "criticalLevel": 3,
+            "criticalLevel": 10,
             "warnLevels": [
                 {
                     "icon": "battery_android_frame_2",
@@ -215,19 +215,19 @@
             "timeouts": [
                 {
                     "idleAction": "lock",
-                    "timeout": 180
+                    "timeout": 300
                 },
                 {
                     "idleAction": "dpms off",
                     "returnAction": "dpms on",
-                    "timeout": 300
+                    "timeout": 600
                 },
                 {
                     "idleAction": [
                         "systemctl",
-                        "suspend-then-hibernate"
+                        "hibernate"
                     ],
-                    "timeout": 600
+                    "timeout": 800
                 }
             ]
         }
@@ -452,7 +452,7 @@
         "useFahrenheit": false,
         "useTwelveHourClock": false,
         "visualiserBars": 45,
-        "weatherLocation": ""
+        "weatherLocation": "Kharagpur"
     },
     "session": {
         "commands": {

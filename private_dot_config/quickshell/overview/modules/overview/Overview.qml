@@ -26,8 +26,8 @@ Scope {
             visible: GlobalStates.overviewOpen
 
             WlrLayershell.namespace: blurEnabled ? "quickshell:overview-blur" : "quickshell:overview"
-            WlrLayershell.layer: WlrLayer.Overlay
-            WlrLayershell.keyboardFocus: WlrKeyboardFocus.Exclusive
+            WlrLayershell.layer: WlrLayer.Top
+            WlrLayershell.keyboardFocus: WlrKeyboardFocus.OnDemand
             color: "transparent"
 
             anchors {
@@ -35,37 +35,6 @@ Scope {
                 bottom: true
                 left: true
                 right: true
-            }
-
-            HyprlandFocusGrab {
-                id: grab
-                windows: [root]
-                property bool canBeActive: root.monitorIsFocused
-                active: false
-                onCleared: () => {
-                    if (!active)
-                        GlobalStates.overviewOpen = false;
-                }
-            }
-
-            Connections {
-                target: GlobalStates
-                function onOverviewOpenChanged() {
-                    if (GlobalStates.overviewOpen) {
-                        delayedGrabTimer.start();
-                    }
-                }
-            }
-
-            Timer {
-                id: delayedGrabTimer
-                interval: Config.options.hacks.arbitraryRaceConditionDelay
-                repeat: false
-                onTriggered: {
-                    if (!grab.canBeActive)
-                        return;
-                    grab.active = GlobalStates.overviewOpen;
-                }
             }
 
             // Keep the layershell surface full-screen so backdrop/blur are not constrained by content size.
@@ -78,6 +47,11 @@ Scope {
                 visible: GlobalStates.overviewOpen
                 focus: GlobalStates.overviewOpen
                 z: 0
+
+                MouseArea {
+                    anchors.fill: parent
+                    onClicked: GlobalStates.overviewOpen = false
+                }
 
                 Rectangle {
                     id: backdropLayer

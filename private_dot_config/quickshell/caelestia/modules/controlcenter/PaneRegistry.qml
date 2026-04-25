@@ -53,6 +53,12 @@ QtObject {
             readonly property string label: "dashboard"
             readonly property string icon: "dashboard"
             readonly property string component: "dashboard/DashboardPane.qml"
+        },
+        QtObject {
+            readonly property string id: "corners"
+            readonly property string label: "corners"
+            readonly property string icon: "rounded_corner"
+            readonly property string component: "corners/CornersPane.qml"
         }
     ]
 

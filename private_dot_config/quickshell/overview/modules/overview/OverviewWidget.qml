@@ -366,6 +366,11 @@ Item {
         anchors.fill: parent
         anchors.margins: Appearance.sizes.elevationMargin
 
+        MouseArea {
+            anchors.fill: parent
+            onClicked: {}
+        }
+
         implicitWidth: contentLayout.implicitWidth + padding * 2
         implicitHeight: contentLayout.implicitHeight + padding * 2
         radius: Appearance.rounding.screenRounding * root.scale + padding

@@ -1,1 +1,4 @@
 0000000000000000000000000000000000000000 25b83f7a372c58a42ced47a120ed75a561b60098 Abhishek Kumar <gwydionmaranio@gmail.com> 1776803861 +0530	clone: from https://github.com/Shanu-Kumawat/quickshell-overview
+25b83f7a372c58a42ced47a120ed75a561b60098 47b65aefd41c65f0b9812bb42cf855b7794d9003 Abhishek Kumar <gwydionmaranio@gmail.com> 1776941810 +0530	commit: fix(overview): prevent stealing pointer focus from overlay elements
+47b65aefd41c65f0b9812bb42cf855b7794d9003 128526c3a20bbf41b116bd484ce00c7c8ada8147 Abhishek Kumar <gwydionmaranio@gmail.com> 1777084659 +0530	commit: feat(overview): close overview when clicking outside main area
+128526c3a20bbf41b116bd484ce00c7c8ada8147 e96ac56578aa785bebfddcce7d4be9337a8a0d85 Abhishek Kumar <gwydionmaranio@gmail.com> 1777084703 +0530	commit: chore(overview): add config.json

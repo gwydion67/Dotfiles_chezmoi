@@ -25,4 +25,5 @@ ShellRoot {
     IdleMonitors {
         lock: lock
     }
+    CornerActions{}
 }
